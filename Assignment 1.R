@@ -9,6 +9,8 @@ pollutantmean <- function(directory = "/Users/rahulgeorge/Documents/Coursera/R P
                 cleanCheck <- complete.cases(input[[pollutant]])
                 goodData <- append(goodData, input[[pollutant]][cleanCheck])
         }
+        print(paste0("Length of goodData: ",length(goodData)))
+        print(paste0("Sum of goodData: ",sum(goodData)))
         result <- mean(goodData)
         setwd(OriginDir)
         result
